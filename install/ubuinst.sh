@@ -138,7 +138,7 @@ cat /dev/null > ~/.bash_history && history -c
 rm /bin/ubuinst* > /dev/null 2>&1
 exit;
 else
-  echo -e 'by: @PainelWebAI' >/usr/lib/telegram
+  echo -e 'by: @nandoslayer' >/usr/lib/telegram
   msg -bar
   echo -e "\e[1;97m           \e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA   \033[1;37m"
   msg -bar
@@ -190,15 +190,15 @@ function install_continue {
 function install_continue2 {
 cd /bin || exit
 rm pweb > /dev/null 2>&1
-wget https://github.com/SrCarrara/pweb/raw/painel/install/pweb > /dev/null 2>&1
+wget  https://github.com/SrCarrara/pweb/raw/painel/install/pweb > /dev/null 2>&1
 chmod 777 pweb > /dev/null 2>&1
 clear
 [[ ! -d /bin/ppweb ]] && mkdir /bin/ppweb
 cd /bin/ppweb || exit
 rm *.sh ver* > /dev/null 2>&1
-wget https://github.com/SrCarrara/pweb/raw/painel/install/verifatt.sh > /dev/null 2>&1
-wget https://github.com/SrCarrara/pweb/raw/painel/install/verpweb > /dev/null 2>&1
-wget https://github.com/SrCarrara/pweb/raw/painel/install/verweb > /dev/null 2>&1
+wget  https://github.com/SrCarrara/pweb/raw/painel/install/verifatt.sh > /dev/null 2>&1
+wget  https://github.com/SrCarrara/pweb/raw/painel/install/verpweb > /dev/null 2>&1
+wget  https://github.com/SrCarrara/pweb/raw/painel/install/verweb > /dev/null 2>&1
 verp=$(sed -n '1 p' /bin/ppweb/verpweb| sed -e 's/[^0-9]//ig') &>/dev/null
 verw=$(sed -n '1 p' /bin/ppweb/verweb| sed -e 's/[^0-9]//ig') &>/dev/null
 echo -e "$verp" >/bin/ppweb/attpweb
@@ -215,7 +215,7 @@ function inst_base {
     echo -e "\n\033[1;36mINSTALANDO O APACHE2 \033[1;33mAGUARDE...\033[0m"
 apt install apache2 -y > /dev/null 2>&1
 apt install dirmngr apt-transport-https -y > /dev/null 2>&1
-apt install php8.1 libapache2-mod-php8.1 php8.1-xml php8.1-mcrypt php8.1-curl php8.1-mbstring php8.1-cli -y > /dev/null 2>&1
+apt install php7.3 libapache2-mod-php7.3 php7.3-xml php7.3-mcrypt php7.3-curl php7.3-mbstring php7.3-cli -y > /dev/null 2>&1
 systemctl restart apache2 > /dev/null 2>&1
 apt-get install mariadb-server -y > /dev/null 2>&1
 cd || exit
@@ -230,18 +230,18 @@ mysql -u root -p"$pwdroot" -e "CREATE DATABASE sshplus;" > /dev/null 2>&1
 mysql -u root -p"$pwdroot" -e "GRANT ALL PRIVILEGES ON sshplus.* To 'root'@'localhost' IDENTIFIED BY '$pwdroot';" > /dev/null 2>&1
 mysql -u root -p"$pwdroot" -e "FLUSH PRIVILEGES" > /dev/null 2>&1
 echo '[mysqld]
-max_connections = 1000' >> /etc/mysql/my.cnf
-apt install php8.1-mysql -y > /dev/null 2>&1
+max_connections = 10000' >> /etc/mysql/my.cnf
+apt install php7.3-mysql -y > /dev/null 2>&1
 phpenmod mcrypt > /dev/null 2>&1
 systemctl restart apache2 > /dev/null 2>&1
 ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin > /dev/null 2>&1
-apt install php8.1-ssh2 -y > /dev/null 2>&1
+apt install php7.3-ssh2 -y > /dev/null 2>&1
 php -m | grep ssh2 > /dev/null 2>&1
-curl -sS https://getcomposer.org/installer | php > /dev/null 2>&1
+curl -sS getcomposer.org/installer | php > /dev/null 2>&1
 mv composer.phar /usr/local/bin/composer > /dev/null 2>&1
 chmod +x /usr/local/bin/composer > /dev/null 2>&1
 cd /var/www/html || exit
-wget https://github.com/SrCarrara/pweb/raw/painel/install/gestorssh.zip > /dev/null 2>&1
+wget  https://github.com/SrCarrara/pweb/raw/painel/install/gestorssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
 unzip gestorssh.zip > /dev/null 2>&1
 (echo yes; echo yes; echo yes; echo yes) | composer install > /dev/null 2>&1
@@ -329,7 +329,7 @@ clear
 echo -e "\E[44;1;37m    INSTALANDO PAINEL    \E[0m"
 echo ""
 echo -e "WEB GESTOR-SSH" | figlet
-echo -e "                              \033[1;31mBy @PainelWebAI\033[1;36m"
+echo -e "                              \033[1;31mBy @nandoslayer\033[1;36m"
 echo ""
 chave=$(curl -sSL "raw.githubusercontent.com/SrCarrara/pweb/painel/install/chave") &>/dev/null
 
@@ -372,7 +372,7 @@ install_continue2
 } > /dev/null
 echo ""
 echo -e "WEB GESTOR-SSH" | figlet
-echo -e "                              \033[1;31mBy @PainelWebAI\033[1;36m"
+echo -e "                              \033[1;31mBy @nandoslayer\033[1;36m"
 echo ""
 echo -e "\033[1;36mDEFINA UMA NOVA SENHA PARA\033[0m"
 echo -e "\033[1;36mO USUÁRIO ROOT DA VPS E\033[0m"
@@ -391,10 +391,10 @@ cron_set
 fun_swap
 tst_bkp
 clear
-sed -i "s;upload_max_filesize = 2M;upload_max_filesize = 256M;g" /etc/php/8.1/apache2/php.ini > /dev/null 2>&1
-sed -i "s;post_max_size = 8M;post_max_size = 256M;g" /etc/php/8.1/apache2/php.ini > /dev/null 2>&1
+sed -i "s;upload_max_filesize = 2M;upload_max_filesize = 256M;g" /etc/php/7.3/apache2/php.ini > /dev/null 2>&1
+sed -i "s;post_max_size = 8M;post_max_size = 256M;g" /etc/php/7.3/apache2/php.ini > /dev/null 2>&1
 echo -e "PAINELWEB GESTOR-SSH" | figlet
-echo -e "                              \033[1;31mBy @PainelWebAI\033[1;36m"
+echo -e "                              \033[1;31mBy @nandoslayer\033[1;36m"
 echo ""
 echo -e "\033[1;32mPAINEL INSTALADO COM SUCESSO!"
 echo ""
@@ -409,7 +409,7 @@ echo -e "\033[1;36m USUÁRIO:\033[1;37m root\033[0m"
 echo -e "\033[1;36m SENHA:\033[1;37m $pwdroot\033[0m"
 echo ""
 echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mpweb\033[0m"
-echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@PainelWebAI\033[0m"
+echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@nandoslayer\033[0m"
 echo ""
 echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar...\033[1;32m! \033[0m"; read
 systemctl restart apache2 > /dev/null 2>&1
