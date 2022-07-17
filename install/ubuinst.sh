@@ -334,7 +334,7 @@ clear
 echo -e "\E[44;1;37m    INSTALANDO PAINEL    \E[0m"
 echo ""
 echo -e "Painel WEB A.I" | figlet
-echo -e "PEGUE SUA CHAVE DE INSTALAÇÃO EM NOSSO TELEGRAM"
+echo -e "033[38;5;164mPEGUE SUA CHAVE DE INSTALAÇÃO EM NOSSO CANAL NO TELEGRAM\033[38;5;197m"
 echo ""
 chave=$(curl -sSL "raw.githubusercontent.com/SrCarrara/pweb/painel/install/chave") &>/dev/null
 
