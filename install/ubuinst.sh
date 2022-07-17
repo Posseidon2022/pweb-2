@@ -333,8 +333,8 @@ dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
 echo -e "\E[44;1;37m    INSTALANDO PAINEL    \E[0m"
 echo ""
-echo -e "Painel WEB A.I" | figlet
-echo -e "033[38;5;164mPEGUE SUA CHAVE DE INSTALAÇÃO EM NOSSO CANAL NO TELEGRAM\033[38;5;197m"
+echo -e "PAINEL WEB A.I" | figlet
+echo -e "ADQUIRA SUA CHAVE WEB PREMIUM EM NOSSO CANAL"
 echo ""
 chave=$(curl -sSL "raw.githubusercontent.com/SrCarrara/pweb/painel/install/chave") &>/dev/null
 
