@@ -144,7 +144,7 @@ echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS
 echo -e "\033[1;37m┃GESTÃO E IMPLEMENTAÇÃO VPN UTILIZANDO OS SERVIDORES UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] O USUÁRIO É RESPONSAVEL A QUALQUER DANO/MÁ UTILIZAÇÃO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
 echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
-  echo -e "┗━┫" msg -ne" VAMOS INICIAR? [S/N]: "
+  echo -ne "┗━┫ VAMOS INICIAR? [S/N]: "
   read opcion
   [[ "$opcion" != @(s|S) ]] && stop_install
   clear && clear
