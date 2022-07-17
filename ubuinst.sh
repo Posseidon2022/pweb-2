@@ -131,7 +131,6 @@ clear
 msg -bar
 echo -e "\033[1;31mPAINEL JÁ INSTALDO EM SUA VPS, RECOMENDO\033[0m"
 echo -e "\033[1;31mUMA FORMATAÇÃO PARA UMA NOVA INSTALÇÃO!\033[0m"
-msg -bar
 sleep 5
 systemctl restart apache2 > /dev/null 2>&1
 cat /dev/null > ~/.bash_history && history -c
@@ -140,14 +139,12 @@ exit;
 else
   echo -e 'by: @PainelWebAI' >/usr/lib/telegram
   echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR PAINEL WEB A.I ⚡   \033[1;37m"
- echo ""
- echo ""
  echo -e "\033[1;37m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m"
 echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
 echo -e "\033[1;37m┃GESTÃO E IMPLEMENTAÇÃO VPN UTILIZANDO OS SERVIDORES UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] O USUÁRIO É RESPONSAVEL A QUALQUER DANO/MÁ UTILIZAÇÃO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
 echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
-  echo -e "┗━┫" msg -ne" VAMOS INICIAR? [S/N]: "
+  echo -ne "┗━┫ VVAMOS INICIAR? [S/N]:"
   read opcion
   [[ "$opcion" != @(s|S) ]] && stop_install
   clear && clear
