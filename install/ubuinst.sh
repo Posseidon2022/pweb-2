@@ -130,7 +130,7 @@ if [[ -e "/var/www/html/pages/system/pass.php" ]]; then
 clear
 msg -bar
 echo -e "\033[1;31mPAINEL JÁ INSTALDO EM SUA VPS, RECOMENDO\033[0m"
-echo -e "\033[1;31mUMA FORMATAÇÃO PARA UMA NOVA INSTALÇÃO!\033[0m"
+echo -e "\033[1;31mUMA FORMATAÇÃO PARA UMA NOVA INSTALAÇÃO!\033[0m"
 sleep 5
 systemctl restart apache2 > /dev/null 2>&1
 cat /dev/null > ~/.bash_history && history -c
@@ -161,7 +161,7 @@ echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━�
   apt upgrade -y
   clear
   msg -bar
-  echo -e "\e[1;97m \e[5m\033[1;100m A ATUALIZAÇÃO FOI UM SUCESSO!\033[1;37m"
+  echo -e "\e[1;97m           \e[5m\033[1;100m   A ATUALIZAÇÃO FOI UM SUCESSO!    \033[1;37m"
   msg -bar
   sleep 3
   clear
@@ -185,7 +185,7 @@ function install_continue {
   msg -bar
   print_center -ama "Se algumas das dependências falharem!!!\nQuando terminar, você pode tentar instalar\no mesmo manualmente usando o seguinte comando\napt install nome_do_pacote"
   msg -bar
-  read -t 60 -n 1 -rsp $'\033[1;39m       << Pressione enter para continuar >>\n'
+  read -t 60 -n 1 -rsp $'\033[1;39m       << Pressione qualquer tecla para continuar >>\n'
 }
 function install_continue2 {
 cd /bin || exit
@@ -215,7 +215,7 @@ function inst_base {
   msg -bar
   echo -e "\e[1;97m           \e[5m\033[1;100m   SERVIDOR PHP e MYSQL    \033[1;37m"
   msg -bar
-  print_center -ama "Este processo pode ser demorado!.\n"
+  print_center -ama "Este processo pode ser demorado!\n"
   msg -bar3
     echo -e "\n\033[1;36mINSTALANDO O APACHE2 \033[1;33mAGUARDE...\033[0m"
 apt install apache2 -y > /dev/null 2>&1
@@ -335,6 +335,7 @@ echo -e "\E[44;1;37m    INSTALANDO PAINEL    \E[0m"
 echo ""
 echo -e "PAINEL WEB A.I" | figlet
 echo -e "\033[1;37m               ❌ INSTALAÇÃO BLOQUEADA PELO DESENVOLVEDOR!\033[38;5;197m\033[38;5;197m\033[1;37m"
+echo -e "\033[1;37m   🔑 USE A CHAVE GRATUITA PainelA.I-FREE OU COMPRE UMA CHAVE PREMIUM!\033[38;5;197m\033[38;5;197m\033[1;37m"
 echo ""
 chave=$(curl -sSL "raw.githubusercontent.com/SrCarrara/pweb/painel/install/chave") &>/dev/null
 
