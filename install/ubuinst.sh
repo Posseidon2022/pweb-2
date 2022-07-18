@@ -161,7 +161,7 @@ echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━�
   apt upgrade -y
   clear
   msg -bar
-  echo -e "\e[1;97m           \e[5m\033[1;100m   A ATUALIZAÇÃO FOI UM SUCESSO!    \033[1;37m"
+  echo -e "\e[1;97m         \e[5m\033[1;100m   A ATUALIZAÇÃO FOI UM SUCESSO!    \033[1;37m"
   msg -bar
   sleep 3
   clear
