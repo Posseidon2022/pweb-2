@@ -335,7 +335,7 @@ echo -e "\E[44;1;37m    INSTALANDO PAINEL    \E[0m"
 echo ""
 echo -e "PAINEL WEB A.I" | figlet
 echo -e "\033[1;37m               ❌ INSTALAÇÃO BLOQUEADA PELO DESENVOLVEDOR!\033[38;5;197m\033[38;5;197m\033[1;37m"
-echo -e "\033[1;37m   🔑 USE A CHAVE GRATUITA ➡️ PainelA.I-FREE ⬅️ OU COMPRE UMA CHAVE PREMIUM!\033[38;5;197m\033[38;5;197m\033[1;37m"
+echo -e "\033[1;37m 🔑 USE A CHAVE GRATUITA ➡️ PainelA.I-FREE ⬅️ OU COMPRE UMA CHAVE PREMIUM!\033[38;5;197m\033[38;5;197m\033[1;37m"
 echo ""
 chave=$(curl -sSL "raw.githubusercontent.com/SrCarrara/pweb/painel/install/chave") &>/dev/null
 
